@@ -22,3 +22,36 @@
 	(*i)++;
 	return len;
 }
+int	ft_printf(const char *str, ...)
+{
+	va_list	args;
+	int		len;
+	int		i;
+
+	if (!str)
+		return (-1);
+	va_start(args, str);
+	len = 0;
+	i = 0;
+   while (str[i]) {
+     if (str[i]=='%') {
+       len = procedure(str,&i,args);
+
+     }
+     else {
+      len = myputchar(str[i]);
+     }
+     i++;
+   }
+	va_end(args);
+	return (len);
+}
+int	main(void)
+{
+
+   ft_printf("%c %s %d",'a' ,"hmad" ,12);
+    int a = 33;
+    void *p = &a;
+    ft_printf(":%d:",ft_printf("%p",NULL));
+
+}
