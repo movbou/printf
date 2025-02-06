@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   myputnbr.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: achajar <achajar@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/02/06 01:53:47 by achajar           #+#    #+#             */
+/*   Updated: 2025/02/06 02:44:29 by achajar          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../ft_printf.h"
 
 static void	putnb(int nb)
@@ -23,14 +35,14 @@ static void	putnb(int nb)
 	while (i > 0)
 		write(1, &num[--i], 1);
 }
+
 int	myputnbr(int nb)
 {
-    long    n;
-    
-    n = nb;
-    putnb(nb);
-	int	i;
+	long	n;
+	int		i;
 
+	n = nb;
+	putnb(nb);
 	i = 0;
 	if (n <= 0)
 	{

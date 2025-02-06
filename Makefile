@@ -13,13 +13,10 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	$(AR) $(NAME) $(OBJ)
 
-%.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
-
 clean:
 	$(RM) $(OBJ)
 
-fclean: 
+fclean: clean
 	$(RM) $(NAME)
 
 re: fclean all

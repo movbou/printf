@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   myputun.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: achajar <achajar@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/02/06 01:53:58 by achajar           #+#    #+#             */
+/*   Updated: 2025/02/06 02:42:24 by achajar          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../ft_printf.h"
 
 static void	putun(unsigned int nb)
@@ -18,14 +30,14 @@ static void	putun(unsigned int nb)
 	while (i > 0)
 		write(1, &num[--i], 1);
 }
+
 int	myputun(unsigned int nb)
 {
-    long    n;
-    
-    n = nb;
-    putun(nb);
-	int	i;
+	long	n;
+	int		i;
 
+	n = nb;
+	putun(nb);
 	i = 0;
 	if (n == 0)
 		i++;
